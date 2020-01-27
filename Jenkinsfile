@@ -2,8 +2,10 @@ environment { FULL_PATH_BRANCH = "${sh(script:'git name-rev --name-only HEAD', r
 pipeline {
 agent any
 statges {
-stage {
+stage(test) {
+   steps {
    bat echo 'GIT_BRANCH'
+   }
 }
 }
 }
